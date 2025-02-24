@@ -25,6 +25,7 @@
       "icon-block",
       "content-fragment-offer",
       "social-media",
+      "commerce-login",
       "product-list-page",
       "enrichment",
       "product-details",
@@ -33,6 +34,8 @@
       "commerce-cart",
       "commerce-checkout",
       "commerce-order-confirmation",
+      "commerce-customer-information",
+      "commerce-account-sidebar",
       "columnsjo"
     ]
   },
@@ -46,7 +49,7 @@
   },
   {
     "id": "column",
-    "components": ["text", "image"]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "accordion",

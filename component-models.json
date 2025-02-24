@@ -66,18 +66,113 @@
     ]
   },
   {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "value": "",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "value": "h1",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
         "component": "reference",
-        "name": "img:nth-child(4)[src]",
+        "valueType": "string",
+        "name": "fileReference",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "img:nth-child(4)[alt]",
+        "valueType": "string",
+        "name": "alt",
+        "value": "Default alt",
         "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "value": "",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
       }
     ]
   },
@@ -155,6 +250,13 @@
     "id": "hero",
     "fields": [
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
         "component": "multiselect",
         "valueType": "string",
         "name": "classes",
@@ -180,31 +282,58 @@
         ]
       },
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
-        "label": "Image",
-        "multi": false
-      },
-      {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "text",
-        "name": "div:nth-child(2)>div:nth-child(1)>h1:nth-child(1)",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "headingType",
         "value": "",
-        "label": "Title",
-        "valueType": "string"
+        "label": "Heading Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(3)>div:nth-child(1)",
+        "name": "hero_text",
         "value": "",
-        "label": "Text",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "hero_linkTitle",
+        "label": "Button Title Attribute",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "hero_linkText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "hero_link",
+        "value": "",
+        "label": "Button Link",
         "valueType": "string"
       }
     ]
@@ -250,22 +379,37 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)>div:nth-child(1)",
+        "name": "content_text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      },
+
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_linkText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "content_link",
+        "value": "",
+        "label": "Button Link",
         "valueType": "string"
       }
     ]
@@ -529,6 +673,19 @@
     ]
   },
   {
+    "id": "commerce-login",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder",
+        "label": "Placeholder",
+        "value": "No configs for Commerce Login",
+        "readOnly": true
+      }
+    ]
+  },
+  {
     "id": "commerce-checkout",
     "fields": [
       {
@@ -537,6 +694,32 @@
         "name": "placeholder",
         "label": "Placeholder",
         "value": "No configs for Commerce Checkout",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "commerce-customer-information",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder",
+        "label": "Placeholder",
+        "value": "No configs for Commerce Customer Information",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "commerce-account-sidebar",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder",
+        "label": "Placeholder",
+        "value": "No configs for Commerce Account Sidebar",
         "readOnly": true
       }
     ]

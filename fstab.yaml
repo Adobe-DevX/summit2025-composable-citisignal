@@ -1,4 +1,4 @@
 mountpoints:
   /:
-    url: https://content.da.live/aabsites/citisignal-ue-copy/
+    url: https://content.da.live/adobe-devx/summit2025-composable-citisignal/
     type: markup
